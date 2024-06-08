@@ -44,3 +44,15 @@ def add_music():
         songs.append(file)
         listbox.insert(END, os.path.basename(file))
 
+def delete_music():
+    selected_song = listbox.curselection()
+    if selected_song:
+        song = listbox.get(selected_song)
+        listbox.delete(selected_song)
+        songs.remove(song)
+        if song in favorite_songs:
+            favorite_songs.remove(song)
+        if running_song['text'] == song:
+            stop_music()
+            running_song['text'] = "Choose a Song"
+
