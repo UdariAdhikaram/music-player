@@ -67,3 +67,6 @@ def add_favorite():
 left_frame = Frame(window, width=400, height=400, bg=co1)
 left_frame.grid(row=0, column=0, padx=1, pady=1)
 
+right_frame = Frame(window, width=400, height=200, bg=co3)
+right_frame.grid(row=0, column=1, padx=0)
+
