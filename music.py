@@ -7,3 +7,5 @@ def pause_music():
     mixer.music.pause()
 def resume_music():
     mixer.music.unpause()
+def stop_music():
+    mixer.music.stop()
