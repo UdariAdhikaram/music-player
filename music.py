@@ -56,3 +56,10 @@ def delete_music():
             stop_music()
             running_song['text'] = "Choose a Song"
 
+def add_favorite():
+    selected_song = listbox.curselection()
+    if selected_song:
+        song = listbox.get(selected_song)
+        if song not in favorite_songs:
+            favorite_songs.append(song)
+
