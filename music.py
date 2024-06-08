@@ -63,3 +63,7 @@ def add_favorite():
         if song not in favorite_songs:
             favorite_songs.append(song)
 
+# Frames
+left_frame = Frame(window, width=400, height=400, bg=co1)
+left_frame.grid(row=0, column=0, padx=1, pady=1)
+
