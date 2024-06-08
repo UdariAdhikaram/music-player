@@ -3,3 +3,5 @@ def play_music():
     running_song['text'] = running
     mixer.music.load(running)
     mixer.music.play()
+def pause_music():
+    mixer.music.pause()
