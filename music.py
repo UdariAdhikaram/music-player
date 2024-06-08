@@ -83,3 +83,67 @@ scrollbar.grid(row=0, column=1, sticky='ns')
 listbox.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=listbox.yview)
 
+# Images and buttons
+img_1 = Image.open('icons/5.jpg')
+img_1 = img_1.resize((380, 380))
+img_1 = ImageTk.PhotoImage(img_1)
+app_image = Label(left_frame, height=400, image=img_1, bg=co1)
+app_image.place(x=10, y=10)
+
+img_3 = Image.open('icons/back.png')
+img_3 = img_3.resize((40, 40))
+img_3 = ImageTk.PhotoImage(img_3)
+prev_button = Button(down_frame, width=50, height=50, image=img_3, bg=co1, font=("Ivy 10"), command=prev_music)
+prev_button.place(x=50, y=75)
+
+img_2 = Image.open('icons/play.png')
+img_2 = img_2.resize((40, 40))
+img_2 = ImageTk.PhotoImage(img_2)
+play_button = Button(down_frame, width=50, height=50, image=img_2, bg=co1, font=("Ivy 10"), command=play_music)
+play_button.place(x=120, y=75)
+
+img_4 = Image.open('icons/forward.png')
+img_4 = img_4.resize((40, 40))
+img_4 = ImageTk.PhotoImage(img_4)
+next_button = Button(down_frame, width=50, height=50, image=img_4, bg=co1, font=("Ivy 10"), command=next_music)
+next_button.place(x=190, y=75)
+
+img_5 = Image.open('icons/pause.png')
+img_5 = img_5.resize((40, 40))
+img_5 = ImageTk.PhotoImage(img_5)
+pause_button = Button(down_frame, width=50, height=50, image=img_5, bg=co1, font=("Ivy 10"), command=pause_music)
+pause_button.place(x=260, y=75)
+
+img_6 = Image.open('icons/resume.png')
+img_6 = img_6.resize((40, 40))
+img_6 = ImageTk.PhotoImage(img_6)
+resume_button = Button(down_frame, width=50, height=50, image=img_6, bg=co1, font=("Ivy 10"), command=resume_music)
+resume_button.place(x=330, y=75)
+
+img_7 = Image.open('icons/stop.png')
+img_7 = img_7.resize((40, 40))
+img_7 = ImageTk.PhotoImage(img_7)
+stop_button = Button(down_frame, width=50, height=50, image=img_7, bg=co1, font=("Ivy 10"), command=stop_music)
+stop_button.place(x=400, y=75)
+
+# Add music button
+img_8 = Image.open('icons/addsong.png')
+img_8 = img_8.resize((40, 40))
+img_8 = ImageTk.PhotoImage(img_8)
+add_music_button = Button(down_frame, image=img_8, width=50, height=50, bg=co1, font=("Ivy 10"), command=add_music)
+add_music_button.place(x=470, y=75)
+
+# Delete music button
+img_9 = Image.open('icons/deletesong.png')
+img_9 = img_9.resize((40, 40))
+img_9 = ImageTk.PhotoImage(img_9)
+delete_music_button = Button(down_frame, image=img_9, width=50, height=50, bg=co1, font=("Ivy 10"), command=delete_music)
+delete_music_button.place(x=540, y=75)
+
+# Add to favorite button
+img_10 = Image.open('icons/favorite.png')
+img_10 = img_10.resize((40, 40))
+img_10 = ImageTk.PhotoImage(img_10)
+favorite_button = Button(down_frame, image=img_10, width=50, height=50, bg=co1, font=("Ivy 10"), command=add_favorite)
+favorite_button.place(x=610, y=75)
+
