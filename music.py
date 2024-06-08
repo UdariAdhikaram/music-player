@@ -1,12 +1,43 @@
+from tkinter import *
+from tkinter import filedialog
+from PIL import ImageTk, Image
+import os
+from pygame import mixer
+
+# Color codes
+co1 = "#ffffff"
+co2 = "#3C1DC6"
+co3 = "#333333"
+co4 = "#CFC7F8"
+co5 = "#000000"
+
+# Initialize pygame mixer
+mixer.init()
+
+# Create the main window
+window = Tk()
+window.title("")
+window.geometry("800x600")
+window.configure(background=co1)
+window.resizable(width=FALSE, height=FALSE)
+
+# Global lists
+songs = []
+favorite_songs = []
+
+# Event functions
 def play_music():
     running = listbox.get(ACTIVE)
     running_song['text'] = running
     mixer.music.load(running)
     mixer.music.play()
+
 def pause_music():
     mixer.music.pause()
+
 def resume_music():
     mixer.music.unpause()
+
 def stop_music():
     mixer.music.stop()
 
@@ -147,3 +178,25 @@ img_10 = ImageTk.PhotoImage(img_10)
 favorite_button = Button(down_frame, image=img_10, width=50, height=50, bg=co1, font=("Ivy 10"), command=add_favorite)
 favorite_button.place(x=610, y=75)
 
+#line = Label(left_frame, width=200, height=1, padx=10, bg=co3)
+#line.place(x=0, y=1)
+
+#line = Label(left_frame, width=200, height=1, padx=10, bg=co1)
+#line.place(x=0, y=3)
+
+# Running song label
+running_song = Label(down_frame, text="Choose a Song", font=("Ivy 16"), width=100, height=1, padx=10, bg=co1, fg=co5, anchor=NW)
+running_song.place(x=0, y=1)
+
+# Change directory to music folder and populate the listbox
+os.chdir(r'E:\Research\research\musicsong')
+songs = os.listdir()
+
+def show():
+    for song in songs:
+        listbox.insert(END, song)
+
+show()
+
+# Start the main loop
+window.mainloop()
