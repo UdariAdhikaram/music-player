@@ -70,3 +70,6 @@ left_frame.grid(row=0, column=0, padx=1, pady=1)
 right_frame = Frame(window, width=400, height=200, bg=co3)
 right_frame.grid(row=0, column=1, padx=0)
 
+down_frame = Frame(window, width=800, height=400, bg=co4)
+down_frame.grid(row=1, column=0, columnspan=3, padx=0, pady=1)
+
