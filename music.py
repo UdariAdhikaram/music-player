@@ -38,3 +38,9 @@ def prev_music():
     listbox.select_set(new_index)
     running_song['text'] = playing
 
+def add_music():
+    files = filedialog.askopenfilenames(initialdir='/', title='Select Music Files', filetypes=(('MP3 Files', '*.mp3'), ('All Files', '*.*')))
+    for file in files:
+        songs.append(file)
+        listbox.insert(END, os.path.basename(file))
+
