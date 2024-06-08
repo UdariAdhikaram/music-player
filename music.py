@@ -73,3 +73,13 @@ right_frame.grid(row=0, column=1, padx=0)
 down_frame = Frame(window, width=800, height=400, bg=co4)
 down_frame.grid(row=1, column=0, columnspan=3, padx=0, pady=1)
 
+# Right frame with listbox and scrollbar
+listbox = Listbox(right_frame, selectmode=SINGLE, font=("Arial 12 bold"), width=42, height=18, bg=co3, fg=co1)
+listbox.grid(row=0, column=0)
+
+scrollbar = Scrollbar(right_frame)
+scrollbar.grid(row=0, column=1, sticky='ns')
+
+listbox.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=listbox.yview)
+
