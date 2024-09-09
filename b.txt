@@ -1,0 +1,16 @@
+Haar Cascades are a series of machine learning object detection 
+algorithms proposed by Paul Viola and Michael Jones1. 
+They are known for being fast and efficient, 
+especially in real-time scenarios. 
+Haar Cascades work by applying a series of features to 
+a sliding window across an image and using a cascade 
+function to quickly discard non-faces, which makes them very fast. 
+However, they can produce a lot of false positives and are 
+not as accurate in detecting faces as some more modern methods1.
+
+On the other hand, MediaPipe offers a collection of 
+state-of-the-art machine learning models for various tasks 
+including face detection, hand tracking, and pose estimation. 
+MediaPipe models are designed to be lightweight and efficient, 
+suitable for mobile and edge devices. They provide high accuracy 
+and real-time performance on a variety of platforms2.
